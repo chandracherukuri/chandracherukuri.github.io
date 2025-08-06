@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChandraMohan Cherukuri | DevOps Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>ChandraMohan Cherukuri</h1>
+    <p>Senior DevOps Engineer | Multi-Cloud Specialist | CI/CD Automation</p>
+    <p>📍 Hyderabad, India | 📞 +91 788-8036686 | 🇦🇪 +971 503264229 (WhatsApp)</p>
+    <p>📧 <a href="mailto:cmohancherukuri@gmail.com">cmohancherukuri@gmail.com</a> | 🔗 <a href="https://www.linkedin.com/in/chandramohan-cherukuri" target="_blank">LinkedIn</a></p>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p>DevOps and Cloud Engineer with 9+ years of IT experience, including 5+ years in DevOps. Skilled in CI/CD automation, Kubernetes orchestration, and infrastructure provisioning using Terraform and Ansible. Proven expertise in deploying secure, scalable cloud solutions across AWS, Azure, and GCP.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div><strong>Cloud:</strong> AWS, Azure, GCP</div>
+      <div><strong>CI/CD:</strong> GitHub Actions, Jenkins, Azure DevOps</div>
+      <div><strong>Kubernetes:</strong> EKS, AKS, GKE, Helm, ArgoCD</div>
+      <div><strong>IaC:</strong> Terraform, Ansible, Bicep, ARM Templates</div>
+      <div><strong>Monitoring:</strong> Prometheus, Grafana, ELK, CloudWatch</div>
+      <div><strong>Security:</strong> IAM, Key Vault, DevSecOps, Trivy</div>
+      <div><strong>Scripting:</strong> Bash, Python, PowerShell</div>
+      <div><strong>Tools:</strong> SonarQube, Nexus, Aqua, Vault</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>LTIMindTree (Nov 2022 - Present)</strong><br>
+        - AWS Microservices Deployment using ECS, Fargate, RDS<br>
+        - CI/CD with CodePipeline, GitHub Actions<br>
+        - Azure DevOps pipelines for AKS deployments<br>
+        - Integrated SonarQube, Trivy for DevSecOps
+      </li>
+      <li><strong>Kyndryl (Apr 2022 - Nov 2022)</strong><br>
+        - Serverless data pipeline using Lambda, SQS, Glue<br>
+        - IaC with Terraform, secrets via AWS Secrets Manager
+      </li>
+      <li><strong>Wipro (Mar 2016 - Apr 2022)</strong><br>
+        - Hybrid cloud automation across AWS & VMware<br>
+        - Logging with CloudWatch, ELK; VPN setup
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>✅ AWS Solution Architect</li>
+      <li>✅ Google Cloud Associate</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Career Highlights</h2>
+    <ul>
+      <li>Automated CI/CD pipelines across AWS, Azure, Jenkins</li>
+      <li>Reduced cloud costs by 35% via optimized migrations</li>
+      <li>Built reusable Terraform modules and Helm charts</li>
+      <li>Implemented blue/green deployments and GitOps</li>
+      <li>Integrated DevSecOps tools for secure pipelines</li>
+      <li>Mentored junior engineers on DevOps best practices</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 ChandraMohan Cherukuri | Built with HTML, CSS & JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
