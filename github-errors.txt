@@ -1,0 +1,137 @@
+mangoos error -  its related database mangosDB
+
+solution: need to update the credentials correct
+and setup mmongosDB URL 
+
+app.js file have manogs DB credentials
+
+(in secrets varible sections need to configure it
+
+Secrets and variables) - new 
+
+env:
+    MONGO_URI: 'mongodb+srv://supercluster.d83jj.mongodb.net/superData'
+    MONGO_USERNAME: ${{ vars.MANGO_USERNAME}}
+    MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
+------------------------
+GitHub.com/solR-SYSTEM
+Secrets and variables) - new secret
+
+name  MONGO_PASSWORD
+
+Secret  SuperPassword
+
+
+Actions variables 
+
+value: 
+-----------------
+
+next app.js  
+line number 14, 15 connections, super cluster (include '' codes copy from configuration file solar-system.yml
+
+
+app.js - mongoose.connect
+-----------------------------------
+add commit code push
+added workflow level env variables
+
+----------------------
+
+name: Solar System Workflow
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'feature/*'
+env:
+    MONGO_URI: 'mongodb+srv://supercluster.d83jj.mongodb.net/superData'
+    MONGO_USERNAME: ${{ vars.MONGO_USERNAME}}
+    MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD}}
+jobs:
+    unit-testing:
+        name: Unit Testing
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+        - name: Setup NodeJS Version - 18
+          uses: actions/setup-node@v3
+          with:
+            node-version: 18
+        - name: Install Dependencies
+          run: npm install
+        - name: Unit Testing 
+          run: npm test
+----------------------------
+name: Solar System Unit Testing
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - feature/*
+
+env:
+  MONGO_URI: 'mongodb+srv://SuperLuster:<MONGO_PASSWORD>@superData.mongodb.net/superData'
+  MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
+  MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
+
+jobs:
+  unit-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Unit Tests
+        run: npm test
+-----------------
+
+🖥️ Available GitHub-Hosted Runners
+🔹 Linux Runners
+ubuntu-latest → Alias to the most recent LTS (currently ubuntu-22.04)
+ubuntu-22.04
+ubuntu-20.04
+👉 Linux runners are fastest & cheapest (more concurrency available).
+👉 Preinstalled with Docker, Node, Python, Java, Go, .NET, etc.
+🔹 Windows Runners
+windows-latest → Alias to the most recent supported Windows Server (currently windows-2022)
+windows-2022
+windows-2019
+👉 Best for building .NET Framework apps, Windows Desktop apps, or testing PowerShell scripts.
+🔹 macOS Runners
+macos-latest → Alias to the latest stable macOS (currently macos-14)
+macos-14 (Sonoma, Apple Silicon M1/M2 hardware)
+macos-13 (Ventura)
+macos-12 (Monterey)
+👉 Best for building iOS / macOS apps with Xcode.
+👉 ⚠️ Note: macOS runners have lowest concurrency & highest cost compared to Linux/Windows.
+
+During my recent ADP Round-2 interview, these were some of the key questions asked:
+• How is Flux used in your GitOps workflow, and how do you maintain it?
+ • How do you ensure zero downtime during application deployments?
+ • How is your CI/CD pipeline configured, and where do you store your Docker images?
+ • What strategies do you use to optimize cloud infrastructure costs?
+ • How do you configure alerting for hosts and services to monitor effectively?
+ • What are your typical day-to-day activities as a DevOps engineer?
+
+“Good afternoon, and thank you for the opportunity. I’m Chandramohan Cherukuri, a Senior DevOps and Cloud Infrastructure Engineer with 9+ years in IT and 5+ years focused on multi-cloud DevOps across AWS, Azure, and GCP.
+
+Over the past few years, I’ve helped global teams reduce deployment times by 60%, cut cloud costs by 30%, and scale infrastructure across three major cloud platforms. At LTIMindTree, I led cloud-native deployments for clients like Citibank and Thryve Digital, architecting CI/CD pipelines with GitHub Actions, managing Kubernetes clusters (EKS, AKS), and provisioning infrastructure using Terraform and Helm.
+
+One of my proudest achievements was leading a DevOps transformation for a Fortune 500 client—migrating legacy workloads to AKS, implementing GitOps with ArgoCD, and integrating DevSecOps tools like SonarQube and Trivy to ensure secure, compliant releases.
+
+I hold certifications in AWS, GCP, and CCNA, and I’m currently based in Hyderabad with a valid UAE work visa and Emirates ID—fully ready to relocate. I’m passionate about building resilient, cost-optimized cloud systems and mentoring teams on infrastructure as code and automation best practices.
+
+I’m excited to bring this experience to a team that’s scaling cloud-native systems and values automation, security, and velocity.”
